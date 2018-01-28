@@ -65,6 +65,5 @@ public class L1_005 {
 			}
 		}
 		
-		
 	}
 }
