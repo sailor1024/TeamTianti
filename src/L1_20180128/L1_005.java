@@ -43,26 +43,39 @@ public class L1_005 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int num=sc.nextInt();
-		String xuehao[]=new String[num];
-		int shizuo[]=new int[num];
-		int zuo[]=new int[num];
-		for(int i=0;i<num;i++){
+		String xuehao[]=new String[num*3];
+		//int shizuo[]=new int[num];
+		//int zuo[]=new int[num];
+		for(int i=0;i<num*3;i++){
 			xuehao[i]=sc.next();
-			shizuo[i]=sc.nextInt();
-			zuo[i]=sc.nextInt();
+			//shizuo[i]=sc.nextInt();
+			//zuo[i]=sc.nextInt();
 		}
 		int chidao=sc.nextInt();
 		int chidaohao[]=new int[chidao];
 		for(int i=0;i<chidao;i++){
 			chidaohao[i]=sc.nextInt();
 		}
-		for(int i=0;i<chidao;i++){
+		//int i=0;
+		//while(i<chidao){
 			
-			for(int j=0;j<num;j++){
-				if(chidaohao[i]==shizuo[j]){
-					System.out.println(xuehao[j]+" "+zuo[j]);
+		//}
+		//for(int i=0;i<chidao;i++){
+			for(int i=0;i<chidao;i++){
+			
+			//for(int j=0;j<num*3;j+=3){
+				
+				for(int j=0;j<num*3;j+=3){
+				//int j=0;
+				//while(j<num*3){
+					
+				int temp=Integer.parseInt(xuehao[j+1]+"");
+				if(chidaohao[i]==temp){
+					System.out.println(xuehao[j]+" "+(xuehao[j+2]));
 				}
+				//j+=3;	
 			}
+		
 		}
 		
 	}
